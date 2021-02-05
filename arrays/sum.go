@@ -10,3 +10,15 @@ func Sum(numbers []int) int {
 
 	return sum
 }
+
+// SumAllTails takes number of slices and return a slice
+func SumAllTails(numbersToSum ...[]int) []int {
+	var sums []int
+
+	for _, numbers := range numbersToSum {
+		tail := numbers[1:] // slice[low:high]
+		sums = append(sums, Sum(tail))
+	}
+
+	return sums
+}
