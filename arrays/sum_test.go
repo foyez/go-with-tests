@@ -1,6 +1,7 @@
 package arrays
 
 import (
+	"fmt"
 	"testing"
 )
 
@@ -37,4 +38,10 @@ func TestSum(t *testing.T) {
 		}
 	})
 
+}
+
+func ExampleSum() {
+	sum := Sum([]int{1, 2, 3})
+	fmt.Println(sum)
+	// Output: 6
 }
