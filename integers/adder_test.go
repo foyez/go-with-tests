@@ -19,3 +19,9 @@ func ExampleAdd() {
 	fmt.Println(sum)
 	// Output: 6
 }
+
+func ExampleAdd_second() {
+	sum := Add(4, 5)
+	fmt.Println(sum)
+	// Output: 9
+}
