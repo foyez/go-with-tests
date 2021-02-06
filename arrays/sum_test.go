@@ -1,8 +1,8 @@
 package arrays
 
 import (
-	"reflect"
 	"fmt"
+	"reflect"
 	"testing"
 )
 
@@ -15,7 +15,7 @@ func TestSum(t *testing.T) {
 	// 		t.Errorf("got %d want %d given, %v", got, want, numbers)
 	// 	}
 	// }
-	
+
 	t.Run("collection of 5 numbers", func(t *testing.T) {
 		// numbers := [5]int{1, 2, 3, 4, 5} // numbers := [...]int{1, 2, 3, 4, 5} - array
 		numbers := []int{1, 2, 3, 4, 5}
@@ -43,14 +43,14 @@ func TestSum(t *testing.T) {
 
 func TestSumAllTails(t *testing.T) {
 
-	checkSums := func(t testing.TB, got, want []int){
+	checkSums := func(t testing.TB, got, want []int) {
 		t.Helper()
 
 		if !reflect.DeepEqual(got, want) {
 			t.Errorf("got %v want %v", got, want)
 		}
 	}
-	
+
 	t.Run("make the sums of some slices", func(t *testing.T) {
 		got := SumAllTails([]int{1, 2}, []int{0, 9})
 		want := []int{2, 9}
