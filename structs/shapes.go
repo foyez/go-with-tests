@@ -2,6 +2,11 @@ package structs
 
 import "math"
 
+// Shape has Area method
+type Shape interface {
+	Area() float64
+}
+
 // Circle has Radius property of a circle
 type Circle struct {
 	Radius float64
